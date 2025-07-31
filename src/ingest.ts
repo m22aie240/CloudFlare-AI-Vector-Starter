@@ -1,5 +1,5 @@
 import type { Env } from "./types";
-import { embed } from "./embedding";
+import { embed } from "./embedding.ts";
 
 export async function ingest(req: Request, env: Env): Promise<Response> {
   let text: string;
