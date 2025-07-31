@@ -1,0 +1,14 @@
+name = "workers-ai-vector-starter"
+compatibility_date = "2025-07-31"
+main = "src/router.ts"
+
+[[vectorize]]
+binding = "DOC_INDEX"
+index_name = "documents-index"
+
+[ai]
+binding = "AI"
+
+[vars]
+MAX_TOKENS = 512
+TOP_K = 5
