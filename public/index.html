@@ -1,0 +1,17 @@
+<!-- Minimal search UI -->
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Edge Vector Search</title>
+<style>body{font:16px sans-serif;max-width:640px;margin:auto;padding:40px}</style></head>
+<body>
+<h1>Edge Semantic Search</h1>
+<input id="q" placeholder="ask me…" style="width:80%">
+<button onclick="go()">Search</button>
+<pre id="out"></pre>
+<script>
+ async function go(){
+  const q=document.getElementById('q').value;
+  const res=await fetch('/search?q='+encodeURIComponent(q));
+  document.getElementById('out').textContent=await res.text();
+ }
+</script>
+</body></html>
